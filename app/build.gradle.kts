@@ -44,4 +44,5 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     implementation("com.squareup.retrofit2:retrofit:2.9.0") // Traemos el motor principal de Retrofit
     implementation("com.squareup.retrofit2:converter-gson:2.9.0") //Traemos el "convertidor" que tarduce los datos JSON a objetos Kotlin.
+    implementation("io.coil-kt:coil:2.6.0")
 }
