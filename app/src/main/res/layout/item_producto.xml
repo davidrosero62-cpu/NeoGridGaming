@@ -1,46 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- CarView añade la eelevacion y esquinas redondeadas tipicas de una tarjeta de producto -->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="16dp">
-
-    <!-- Imagen del producto -->
-    <ImageView
-        android:id="@+id/ivProducto"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:scaleType="centerCrop"
-        android:background="#333333"
-        android:layout_marginBottom="8dp"
-        android:contentDescription="Imagen del producto" />
-
-    <!-- Nombre del producto -->
-    <TextView
-        android:id="@+id/tvNombreProducto"
+    android:layout_margin="12dp"
+    app:cardBackgroundColor="#111111"
+    app:cardCornerRadius="12dp"
+    app:cardMaxElevation="8dp"
+    app:strokeColor="#006e09"
+    app:strokeWidth="2dp">
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:text="Nombre del Producto" />
+        android:orientation="vertical"
+        android:padding="16dp">
 
-    <!-- Stock del producto -->
-    <TextView
-        android:id="@+id/tvProductotvStock"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:text="Stock del producto" />
+        <!--Imagen del producto con fondo neutro -->
+        <ImageView
+            android:id="@+id/ivProducto"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="#000000"
+            android:scaleType="fitCenter" />
 
-    <!-- Precio del producto -->
-    <TextView
-        android:id="@+id/tvPrecioProducto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="14sp"
-        android:textColor="#666666"
-        android:text="$0.00"
-        android:layout_marginTop="4dp" />
+        <!-- Nombre del producto con estilo Orbitron sugerido -->
+        <TextView
+            android:id="@+id/tvNombreProducto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Nombre del Producto"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-</LinearLayout>
+        <!-- Stock del producto -->
+        <TextView
+            android:id="@+id/tvStock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Stock: 0"
+            android:textColor="#CCCCCC"
+            android:textSize="14sp" />
+
+        <!--Precio con el color neon caracteristico -->
+        <TextView
+            android:id="@+id/tvPrecioProducto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0.00"
+            android:textColor="#00ffcc"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -6,6 +6,6 @@ import retrofit2.http.GET
 interface ApiService {
     // Aquí definiremos las peticiones.
     // Por ahora, solo ponemos una función de ejemplo:
-    @GET("api/productos")
+    @GET("/")
     suspend fun getProductos(): List<Producto>
 }
